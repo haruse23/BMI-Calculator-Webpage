@@ -1,0 +1,94 @@
+    <style>
+      .container_1 {
+        text-align: center;
+      }
+
+
+      .container_2 {
+        text-align: center;
+
+    
+      }
+
+      .container_3 {
+        
+        text-align: center;
+        position:relative;
+        top: 20px;
+    
+    
+    }
+    </style>
+
+
+
+    <script>
+
+        function BMI() {
+            
+            
+            var Weight = parseFloat(document.getElementById("Weight").value);
+            var Height = parseFloat(document.getElementById("Height").value);
+
+            var BMI = Weight/Height ** 2;
+
+            window.alert("Input recorded.")
+            document.write("<p style='text-align:center;font-size:100px'>Your BMI is: </p>")
+            document.write(`<p style='text-align:center;font-size:100px'>${BMI.toFixed(2)}</p>`)
+            document.write("<br>")
+
+
+            if (BMI < 18.5) {
+                document.write("<p style='text-align:center;font-size:100px'>You're Underweight</p>");
+            }
+           
+
+
+            else if (BMI >= 18.5 && BMI <= 24.9) {
+                document.write("<p style='text-align:center;font-size:100px'>You're Normal</p>");
+            }
+           
+
+
+            else if (BMI >= 25 && BMI <= 29.9) {
+                document.write("<p style='text-align:center;font-size:100px'>You're Overweight</p>");
+            }
+            
+
+
+            else {
+                document.write("<p style='text-align:center;font-size:100px'>You're Obese</p>");
+            }
+
+
+    
+    
+    }
+    
+    </script>
+  
+
+    <h1 style = "text-align: center;"> BMI Calculator </h1>
+    <br><br>  <!--Line Break-->
+
+
+    <h2 style="text-align: center;"> Weight (kg): <h2> <!--Weight Header-->
+    <div  class="container_1"> <input id= "Weight" style="width: 185px;"  type="text" placeholder="Enter your weight in kilograms"> <!--First Input Field--> </div>
+    
+    <br><br>  <!--Line Break-->
+
+    <h2 style="text-align: center;"> Height (m): <h2> <!--Height Header-->
+    <div  class='container_2' > <input id ="Height" type="text" placeholder="Enter your height in meters"> <!--Second Input Field--> </div>
+
+
+
+
+    <div class='container_3'>  <button type="button" onclick="BMI()">Calculate</button> </div>
+    
+
+
+
+
+
+
+
